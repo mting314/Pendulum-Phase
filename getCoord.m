@@ -17,9 +17,4 @@ if strcmp(click_type,'normal')
     set(q,'hittest','off');
     set(w,'hittest','off');
     setappdata(aH,'CurrentPoint',ptH);
-elseif strcmp(click_type,'alt')
-    %do your stuff once your point is selected   
-    disp('Done clicking!');
-    % HERE IS WHERE YOU CAN PUT YOUR STUFF
-    uiresume(f);
 end
