@@ -1,6 +1,6 @@
-c = .2; %friction/damping
+c = .3; %friction/damping
 freq_drive = 2.0/3.0; %driving frequency
-F = 1; %max force of driver
+F = 1.7; %max force of driver
  
 y1min = -2;
 y1max = 20;
@@ -50,7 +50,7 @@ for id = 1:length(T)
     
     %Plot of particular a particular trajectory (starting with a particular initial condition)%
     subplot(2,1,2);
-    [ts,ys] = ode45(@(t,Y)Pendulum(t,Y,c,freq_drive,F),[0,50],[0;1]);
+    [ts,ys] = ode45(@(t,Y)Pendulum(t,Y,c,freq_drive,F),[0,100],[0;1]);
     plot(ts,ys(:,1), 'Color', 'b')
     xlabel('time')
     ylabel('angle')

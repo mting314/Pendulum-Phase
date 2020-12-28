@@ -1,14 +1,14 @@
 aH = axes;
 
-c = 0; %friction/damping
+c = .2; %friction/damping
 freq_drive = 2.0/3.0; %driving frequency
-F = 0; %max force of driver
+F = 1; %max force of driver
  
-y1min = -2;
-y1max = 20;
+y1min = 0;
+y1max = 2;
 
-y2min = -2;
-y2max = 4;
+y2min = 1;
+y2max = 3;
 
 y1 = linspace(y1min,y1max,20);
 y2 = linspace(y2min,y2max,20);

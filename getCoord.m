@@ -10,8 +10,8 @@ if strcmp(click_type,'normal')
     
     set(ptH,'hittest','off'); % so you can click on the Markers
     
-    [ts,ys] = ode45(@(t,Y) Pendulum(t,Y,c,freq_drive,F),[0,50], [pt(1) pt(3)]);
-    [bts,bys] = ode45(@(t,Y) Pendulum(t,Y,c,freq_drive,F),[0,-50], [pt(1) pt(3)]);
+    [ts,ys] = ode45(@(t,Y) Pendulum(t,Y,c,freq_drive,F),[0,1], [pt(1) pt(3)])
+    [bts,bys] = ode45(@(t,Y) Pendulum(t,Y,c,freq_drive,F),[0,-1], [pt(1) pt(3)])
     w=plot(aH,ys(:,1),ys(:,2),'b');
     q=plot(aH,bys(:,1),bys(:,2),'b');
     set(q,'hittest','off');
